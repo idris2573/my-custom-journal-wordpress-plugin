@@ -1,0 +1,33 @@
+a:hover {
+  text-decoration: none !important;
+}
+
+.card:hover{
+  opacity: 0.8;
+}
+
+.children{
+  color: red;
+  margin-left: 50px;
+}
+
+.input-text, input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{
+  background-color: #fff !important;
+  background-clip: padding-box !important;
+  border: 1px solid #ced4da !important;
+}
+
+.w-fit-content{
+    width:  fit-content;
+}
+
+#add-product li{
+  font-size: 27px;
+  margin: 0 10px 0 10px;
+}
+
+
+#add-product li ul li{
+  font-size: 23px;
+  margin: 0 10px 0 10px;
+}
