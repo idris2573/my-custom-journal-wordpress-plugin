@@ -174,11 +174,26 @@ final class MyCustomJournal {
         }
       }
       </style>
+      ';
 
+      global $wp;
+      $current_url = home_url(add_query_arg($_GET,$wp->request));
+      if(strpos($current_url, 'fancy_product_designer') ||
+         strpos($current_url, 'fpd_product_builder') ||
+         strpos($current_url, 'fpd_ui_layout_composer') ||
+         strpos($current_url, 'fpd_manage_designs') ||
+         strpos($current_url, 'fpd_orders') ||
+         strpos($current_url, 'fpd_settings')
+      ){
+        return;
+      }
+
+      echo '
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
       <script>
         $(document).ready(function(){
+
           $("#wp-admin-bar-site-name").html(\'<img src="' . plugin_dir_url( __FILE__ ) . '../images/logo.png">\');
 
           if( document.location.href.indexOf("wp-admin/index.php") > -1 && $("#contextual-help-link").text() != "Help"){
